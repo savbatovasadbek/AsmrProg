@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-gradient: linear-gradient(90deg, #ee, #f9f9f9, #eee);
+  --color-background: #d9d9d9;
+  --color-card-background: #fff;
+  --color-header: #000;
+  --color-info: #363949;
+  --box-shadow: rgba(100, 100, 111, 0, 2) 0px 7px 29px 0px;
+}
+
+.dark-mode {
+  --color-gradient: linear-gradient(
+    to right,
+    #656871 0%,
+    #888b84 20%,
+    #656871 40%,
+    656871 100%
+  );
+  --color-background: #414247;
+  --color-card-background: #252525;
+  --color-header: #000;
+  --color-info: #ccc;
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Toogle */
+#toogle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-card-background);
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+/* Card section */
+.card {
+  max-width: 380px;
+  background: var(--color-card-background);
+  box-shadow: var(--box-shadow);
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.card .card-image {
+  margin-bottom: 1rem;
+}
+
+.card .card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.card .card-header {
+  color: var(--color-header);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.card .card-info {
+  color: var(--color-info);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
